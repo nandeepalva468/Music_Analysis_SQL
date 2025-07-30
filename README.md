@@ -148,4 +148,22 @@ select * from spotify
 where artist='Kendrick Lamar';
 ```
 
+3. Get the total number of comments for tracks where `licensed = TRUE`.
+```sql
+select sum(comments) as total_comments from spotify
+where licensed='true';
+```
+
+4. Find all tracks that belong to the album type `single`.
+```sql
+select * from spotify
+where album_type='single';
+```
+
+5. Count the total number of tracks by each artist.
+```sql
+select artist,count(*) as total_songs  from spotify
+group by artist;
+```
+
 
