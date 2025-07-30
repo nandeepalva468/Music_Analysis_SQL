@@ -1,2 +1,2 @@
 # 🎵 Music Analysis Using SQL
-![image alt](https://github.com/nandeepalva468/Coffee_Sales_Analysis_SQL/blob/d5f5b2fe6000ba914e22b629268d7de24f0bb148/coffeee.jpg)
+![image alt](https://github.com/nandeepalva468/Music_Analysis_SQL/blob/4cc39c0e340a0583c447c312e999746dda1fa83b/Spotify.jpg)
