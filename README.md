@@ -140,4 +140,12 @@ select * from spotify
 where stream > 1000000000;
 ```
 
+2. List all albums along with their respective artists.
+```sql
+select album,artist from spotify;
+
+select * from spotify 
+where artist='Kendrick Lamar';
+```
+
 
