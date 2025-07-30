@@ -224,6 +224,4 @@ from cte
 order by 2 DESC
 ```
 
-```
-
 
