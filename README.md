@@ -72,4 +72,72 @@ Before analysis, we performed the following data cleaning and preprocessing step
 DELETE FROM spotify
 WHERE artist IS NULL OR track IS NULL OR album IS NULL OR
       views IS NULL OR likes IS NULL OR stream IS NULL;
+```
+### 1. Database Setup
+
+```sql
+CREATE DATABASE SPOTIFY_DB;
+```
+### 2. Table Creation
+```sql
+DROP TABLE IF EXISTS spotify;
+CREATE TABLE spotify (
+    artist VARCHAR(255),
+    track VARCHAR(255),
+    album VARCHAR(255),
+    album_type VARCHAR(50),
+    danceability FLOAT,
+    energy FLOAT,
+    loudness FLOAT,
+    speechiness FLOAT,
+    acousticness FLOAT,
+    instrumentalness FLOAT,
+    liveness FLOAT,
+    valence FLOAT,
+    tempo FLOAT,
+    duration_min FLOAT,
+    title VARCHAR(255),
+    channel VARCHAR(255),
+    views FLOAT,
+    likes BIGINT,
+    comments BIGINT,
+    licensed BOOLEAN,
+    official_video BOOLEAN,
+    stream BIGINT,
+    energy_liveness FLOAT,
+    most_played_on VARCHAR(50)
+);
+```
+### 3.Data Cleaning
+```sql
+-- Remove rows with NULLs in important fields
+SELECT FROM spotify
+WHERE artist IS NULL OR track IS NULL OR album IS NULL OR
+      album_type IS NULL OR danceability IS NULL OR energy IS NULL OR
+      loudness IS NULL OR speechiness IS NULL OR acousticness IS NULL OR
+      instrumentalness IS NULL OR liveness IS NULL OR valence IS NULL OR
+      tempo IS NULL OR duration_min IS NULL OR title IS NULL OR
+      channel IS NULL OR views IS NULL OR likes IS NULL OR
+      comments IS NULL OR licensed IS NULL OR official_video IS NULL OR
+      stream IS NULL OR energy_liveness IS NULL OR most_played_on IS NULL;
+```
+### 4.Delete if there is an NULL
+```sql
+DELETE FROM spotify
+WHERE artist IS NULL OR track IS NULL OR album IS NULL OR
+      album_type IS NULL OR danceability IS NULL OR energy IS NULL OR
+      loudness IS NULL OR speechiness IS NULL OR acousticness IS NULL OR
+      instrumentalness IS NULL OR liveness IS NULL OR valence IS NULL OR
+      tempo IS NULL OR duration_min IS NULL OR title IS NULL OR
+      channel IS NULL OR views IS NULL OR likes IS NULL OR
+      comments IS NULL OR licensed IS NULL OR official_video IS NULL OR
+      stream IS NULL OR energy_liveness IS NULL OR most_played_on IS NULL;
+```
+### SQL Questions(EASY LEVEL)
+1. Retrieve the names of all tracks that have more than 1 billion streams.
+```sql
+select * from spotify
+where stream > 1000000000;
+```
+
 
